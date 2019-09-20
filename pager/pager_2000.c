@@ -8,7 +8,6 @@ typedef struct node
     struct node *link;
 } Node, *LinkList;
 
-void CHANGE() {}
 
 /**
  * 欧几里得算法  辗转相除法 求最大因子
