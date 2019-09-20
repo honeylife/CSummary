@@ -64,11 +64,12 @@ int main(int argc, char const *argv[])
             return;
         }
     }
-
+    fclose(fp);
     printf("str no");
     return 0;
 }
 
+// 检测字符串是否存在 
 int checkstr(char *s, char *t, int flag)
 {
     char *q;
