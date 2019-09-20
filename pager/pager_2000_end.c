@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include<string.h>
 
 /**
  * 命令 sgrep 用来在文件中查找给定字符串，并输出串所在行及行号。命令格式为：
