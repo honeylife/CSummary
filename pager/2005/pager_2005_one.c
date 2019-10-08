@@ -18,11 +18,20 @@ int CHECKBTREE(BTREE bt1, BTREE bt2){
     if (bt1 == NULL && bt2 == NULL){
         return 1;
     }
-    if (bt1 != NULL && bt2 != NULL &&bt1->data==bt2->data&&
+    // 相似的条件
+    if (bt1 != NULL && bt2 != NULL &&
         CHECKBTREE(bt1->lchild, bt2->lchild) && CHECKBTREE(bt1->rchild, bt2->rchild)) {
         return 1;
     }
 
+
+    /**
+     *  等价的条件
+     *  if (bt1 != NULL && bt2 != NULL &&bt1->data==bt2->data&&
+        CHECKBTREE(bt1->lchild, bt2->lchild) && CHECKBTREE(bt1->rchild, bt2->rchild)) {
+        return 1;
+    }
+     * */
     return 0;
 }
 
