@@ -8,10 +8,11 @@ int main(int argc, char const *argv[])
     printf("please input n:\n");
     scanf("%d", &n);
     int flag = 0;
+    printf("%d,%d,",2,3);
     for (int i = 2; i <= n; i++)
     {
         flag = 0;
-        for (int j = 2; j <i/2 ; j++)
+        for (int j = 2; j <=i/2 ; j++)
         {
             if (i % j == 0)
             {
