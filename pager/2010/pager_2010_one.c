@@ -25,23 +25,28 @@ BTREE SEARCHBTREE(BTREE BT, BTREE q)
     while (front < rear)
     {
         p = QUEUE[++front];
-       
-       
+
         if (p->lchild != NULL)
         {
-             if (q->lchild == p)
-        {
-            return q->rchild;
-        }else{
-            QUEUE[++rear] = p->lchild;}
+            if (q->lchild == p)
+            {
+                return q->rchild;
+            }
+            else
+            {
+                QUEUE[++rear] = p->lchild;
+            }
         }
         if (p->rchild != NULL)
         {
-             if (q->rchild == p)
-        {
-            return q->lchild;
-        }else{
-            QUEUE[++rear] = p->rchild;}
+            if (q->rchild == p)
+            {
+                return q->lchild;
+            }
+            else
+            {
+                QUEUE[++rear] = p->rchild;
+            }
         }
     }
 
