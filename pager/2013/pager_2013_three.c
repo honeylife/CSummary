@@ -61,33 +61,33 @@ char *maxwords(char *r, char *t)
     char *pr = NULL, *pt = NULL, *ps = NULL, *s1=t;
     int i = 0, j = 0;
     int maxlen = 0;
-    int flag=0;
+    int flag=0; // 这里标记是否有相同的字符串
     while (*r != '\0')
     {
-        pr = r;
+        pr = r; // 每次让pr指向r所要比较单词的首地址
         i = 0;
-        while (*r != ' ' && *r != '\0')
+        while (*r != ' ' && *r != '\0')  // 找r中的每一个单词，
         {
             r++;
             i++;
         }
-        pt = t;
+        pt = t; // 每次比较，让pt回到t的首地址
         while (*pt != '\0')
         {
             j = 0;
-            ps = pt;
+            ps = pt; // ps 指向t中每个单词的首地址
             while (*pt != ' ' && *pt != '\0')
             {
                 j++;
                 pt++;
             }
-            while (pr != r && *pr == *ps && i == j)
+            while (pr != r && *pr == *ps && i == j) // 比较单词是否相同
             {
                
                 pr++;
                 ps++;
             }
-            if ( ps == pt && pr == r)
+            if ( ps == pt && pr == r) 
             {
                 if (i > maxlen)
                 {
